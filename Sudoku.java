@@ -39,12 +39,7 @@ public class Sudoku {
     public Sudoku() {
         this.grid = new int[9][9];
         this.valIsFixed = new boolean[9][9];     
-        
-        /* 
-         * Note that the third dimension of the following array is 10,
-         * because we need to be able to use the possible values 
-         * (1 through 9) as indices.
-         */
+
         this.subgridHasVal = new boolean[9][9][10];        
         this.rowHasVal = new boolean [9][10];
         this.colHasVal = new boolean [9][10];
@@ -140,7 +135,7 @@ public class Sudoku {
     
 
     /*
-     * This is the key recursive-backtracking method.  Returns true if
+     * recursive-backtracking method.  Returns true if
      * a solution has already been found, and false otherwise.
      * 
      * Each invocation of the method is responsible for finding the
